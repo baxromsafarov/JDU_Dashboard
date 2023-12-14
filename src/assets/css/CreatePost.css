@@ -1,0 +1,314 @@
+.post-form{
+    display: flex;
+    justify-content: space-around;
+}
+.text-header{
+    padding: 10px 0 10px 10px;
+    border: 1px solid rgb(224, 224, 224);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.create-message{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgb(172, 172, 172);
+    width: 800px;
+    margin-right: 20px;
+}
+.message-header{
+    padding: 20px 10px 10px 10px;
+}
+.message-body{
+    padding: 10px;
+    
+}
+.gr-sel{
+    max-width: 350px;
+    max-height: 400px;
+    
+}
+.post-selection{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.d-flex{
+    padding: 20px 10px 10px 10px;
+}
+.btn-secondary{
+    border-radius: 8px;
+    background-color: rgb(252, 252, 252);
+}
+.btns-group{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 ;
+}
+.btn-1{
+    color: red;
+    border: 1px solid red;
+    font-weight: 700;
+}
+.btn-2{
+    color: rgb(41, 192, 41);
+    border: 1px solid rgb(41, 192, 41);
+    font-weight: 700;
+}
+.btn-3{
+    color: rgb(86, 86, 255);
+    border: 1px solidr rgb(86, 86, 255);
+    font-weight: 700;
+}
+.post-date{
+    padding: 10px 10px 0px 10px;
+}
+.input-group{
+    display: flex;
+    justify-content: space-between;
+}
+.save-btns{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 10px 20px 10px;
+    
+}
+.material-symbols-outlined{
+    top: 5px;
+    right: 4px;
+    position: relative;
+}
+.category{
+    background-color: rgb(255,255,255);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgb(172, 172, 172);
+    margin-bottom: 20px;
+}
+.post-group{
+    background-color: rgb(255,255,255);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgb(172, 172, 172);
+}
+.group-chooser{
+    padding: 0px 10px 20px 10px;
+}
+.form-control{
+    border-radius: 0 0 8px 8px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #e8e8e8;
+  }
+  
+  h2 {
+    color: #333;
+  }
+ 
+.app-container {
+    padding: 20px;
+  }
+  
+  .group-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Создает сетку с колонками минимальной ширины 200px и максимальной 1fr */
+    gap: 20px; /* Расстояние между карточками */
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .group-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .group-id {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .group-members {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .group-leader {
+    font-size: 14px;
+    color: #333;
+  }
+
+.show-more-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .show-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(66,42,251);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .show-more-button:hover {
+    background-color: rgb(81, 59, 250);
+  }
+
+  /* Общие стили для страницы добавления пользователей */
+.add-user-container {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f0f2f5;
+  }
+  
+  /* Заголовок */
+  .add-user-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .add-user-header img {
+    border-radius: 50%;
+  }
+  
+  .add-user-header h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Стили формы */
+  .add-user-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .add-user-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .add-user-form input,
+  .add-user-form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-user-form button {
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Стили для радио кнопок и чекбоксов */
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .radio-group label,
+  .checkbox-group label {
+    margin: 0;
+  }
+  
+  /* Стилизация для медиа запросов, если нужно адаптировать под мобильные устройства */
+  @media (max-width: 768px) {
+    .add-user-form {
+      width: 90%;
+    }
+    .css-1n0d0tq{
+        margin-top: 140px;
+      }
+      .css-1wv9e55{
+        margin-top: 60px;
+      }
+  }
+  .toggle-buttons{
+    float: right;
+  }
+  .groups-icon {
+   font-size: 20px;
+   font-weight: 300;
+   left: 10px;
+  }
+
+.d-icons{
+    font-size: 21px;
+    left: 1px;
+    top: 2px;
+}
+ 
+  .chosen-teach{
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    font-weight: 700;
+  }
+  .chosen-stud{
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+  }
+  .teach li{
+    box-shadow: 0px 0px 2px;
+    border-radius: 2px;
+    margin: 15px;
+    list-style: none;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+  .per-span{
+    margin-right: 15px;
+  }
+  .teach{
+    box-shadow: 0px 0px 2px;
+    border-radius: 2px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  .create-title{
+    font-weight: 700;
+    font-size: 36px;
+  }
