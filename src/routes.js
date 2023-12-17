@@ -34,6 +34,26 @@ import AddAdmin from "views/admin/AddAdmin/AddAdmin";
 import LinkForm from "views/admin/AddLinks/AddLinks";
 import LinkTable from "views/admin/AddLinks/ShowLinks";
 
+const someData = [
+  {
+    id: 1,
+    name: 'Bahrom',
+    lastname: 'Mamatov',
+
+  },
+  {
+    id: 2,
+    name: 'Bahrom',
+    lastname: 'Mamatov',
+
+  },
+  {
+    id: 3,
+    name: 'Bahrom',
+    lastname: 'Mamatov',
+
+  },
+]
 
 const routes = [
   {
@@ -52,8 +72,11 @@ const routes = [
           mail
       </span>
     ),
+    // render: (props) => <MessageList {...props} data={someData} />,
     component: MessageList,
+    // element: <MessageList data={someData} />,
     secondary: true,
+    
   },
   {
     name: "Group Message",

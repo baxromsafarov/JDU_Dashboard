@@ -91,15 +91,21 @@ function SignIn() {
     }
     setButtonText("Signing in");
     try {
+      const formdata = new FormData();
+
+      formdata.append("email", email);
+      formdata.append("password", password);
+
       let response = await AuthApi.Login({
-        email,
-        password,
-      });
-      if (response.data && response.data.success === false) {
+        email: email,
+        password: password
+      })
+      // console.log(response);
+      if (!response.ok || response.status !== 200) {
         setButtonText("Sign in");
         return setError(response.data.msg);
       }
-      return setProfile(response);
+      return setProfile(await response.json());
     } catch (err) {
       console.log(err);
       setButtonText("Sign in");
@@ -109,10 +115,11 @@ function SignIn() {
       return setError("There has been an error.");
     }
   };
-  const setProfile = async (response) => {
-    let user = { ...response.data.user };
-    user.token = response.data.token;
+  const setProfile = async (data) => {
+    let user = { ...data.user };
+    user.token = data.token;
     user = JSON.stringify(user);
+    // console.log(user);
     setUser(user);
     localStorage.setItem("user", user);
     return history.push("/dashboards");

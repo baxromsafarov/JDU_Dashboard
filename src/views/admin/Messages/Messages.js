@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, VStack, Text, Heading, Divider, Button, Stack } from '@chakra-ui/react';
 import { CheckIcon } from '@chakra-ui/icons';
+
+
 
 const initialMessages = [
     {
@@ -47,7 +49,37 @@ const initialMessages = [
 
 ];
 
-const MessageList = () => {
+const MessageList = (props) => {
+ 
+  const [backendData, setBackendData] = useState([{}])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://fsv55ldvld.execute-api.ap-northeast-1.amazonaws.com/default/api/auth/signIn");
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setBackendData(data);
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+        // Handle the error appropriately in your UI
+      }
+    };
+  
+    fetchData();
+  }, []); 
+
+  // useEffect(() => {
+  //   fetch("https://ktd5kacfz5.execute-api.ap-northeast-1.amazonaws.com/default/").then(
+  //     response => response.json()
+  //   ).then(
+  //     data =>{
+  //       setBackendData(data);
+  //     }
+  //   )
+  // }, []);
+  console.log(backendData);
   const [messages, setMessages] = useState(initialMessages);
   const [activeUserId, setActiveUserId] = useState(null);
   const [visibleMessagesCount, setVisibleMessagesCount] = useState(4);
@@ -66,7 +98,7 @@ const MessageList = () => {
     };
   // Filter messages by the active user
   const activeUserMessages = messages.filter((msg) => msg.userId === activeUserId);
-
+    
   const visibleMessages = activeUserId ? activeUserMessages : messages.slice(0, visibleMessagesCount);
   return (
     <Box pt={{ base: "150px", md: "80px", xl: "80px" }}>
