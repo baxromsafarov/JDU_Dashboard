@@ -33,6 +33,7 @@ import GroupMessage from "views/admin/GroupMessage/GroupMessage";
 import AddAdmin from "views/admin/AddAdmin/AddAdmin";
 import LinkForm from "views/admin/AddLinks/AddLinks";
 import LinkTable from "views/admin/AddLinks/ShowLinks";
+import SavedMessages from "views/admin/SavedMessages/SavedMessages";
 
 const someData = [
   {
@@ -103,6 +104,21 @@ const routes = [
       />
     ),
     component: CreatePost,
+    secondary: true,
+  },
+  {
+    name: "Saved Message",
+    layout: "/admin",
+    path: "/saved-posts",
+    icon: (
+      <Icon
+        as={MdEdit}
+        width='20px'
+        height='20px'
+        color='inherit'
+      />
+    ),
+    component: SavedMessages,
     secondary: true,
   },
   

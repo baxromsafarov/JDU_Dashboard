@@ -17,7 +17,7 @@
 // let base = "users";
 
 // export default AuthApi;
-
+// https://fsv55ldvld.execute-api.ap-northeast-1.amazonaws.com
 
 // Update the base URL to match the provided API endpoint
 const BASE_URL = "https://fsv55ldvld.execute-api.ap-northeast-1.amazonaws.com/default/api/auth";
@@ -26,12 +26,13 @@ class AuthApi {
   static Login = async (data) => {
     const response = await fetch(`${BASE_URL}/signIn`, {
       method: "POST",
+      mode: "cors",
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
-   
+    console.log(response);
     return response;
   };
 

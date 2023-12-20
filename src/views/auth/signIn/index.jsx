@@ -103,7 +103,7 @@ function SignIn() {
       // console.log(response);
       if (!response.ok || response.status !== 200) {
         setButtonText("Sign in");
-        return setError(response.data.msg);
+        return setError(response.data);
       }
       return setProfile(await response.json());
     } catch (err) {

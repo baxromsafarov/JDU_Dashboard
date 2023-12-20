@@ -93,7 +93,6 @@ export default function CreatePost(){
                 </div>
                 <div className='post-selection'>
                     <div className='category'>
-                        <div className='gr-sel'><SearchGroup /></div>
                         <div className='post-important'>
                           <div class="btns-group">
                             <input type="radio" class="btn-check" name="importans" id="option1" value={'high'} autocomplete="off"  />
@@ -107,23 +106,22 @@ export default function CreatePost(){
                           </div>
                         </div>
                         <div className='post-cat'><Categories /></div>
-                        <div className='post-date'><CustomDatePicker /></div>
                         <div className='save-btns'>
                           {/* <button type="button" class="btn btn-outline-primary">
                           <span class="material-symbols-outlined">save</span>
                             <span>Save Draft</span>
                           </button> */}
-                          <button type="button" class="btn btn-primary">
+                          {/* <button type="button" class="btn btn-primary">
                             <span class="material-symbols-outlined">publish</span>
                             <span>Publish</span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
-                    <div className='post-group'>
+                    {/* <div className='post-group'>
                       <div className='gr-sel'><SearchGroup /></div>
                       <div className='group-chooser'><GroupChooser /></div>
-                    </div>
-                    <button type="button" class="btn btn-outline-primary">
+                    </div> */}
+                    <button type="submit" class="btn btn-outline-primary">
                           <span class="material-symbols-outlined">save</span>
                             <span>Save Draft</span>
                           </button>
